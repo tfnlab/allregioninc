@@ -55,7 +55,7 @@ https://templatemo.com/tm-567-nomad-force
                             <li class="nav-item" ><a class="nav-link" href="https://opensea.io/collection/all-region">Ethereum</a></li>
                             <li class="nav-item" ><a class="nav-link" href="https://opensea.io/collection/all-region-v2">Matic</a></li>
                             <li class="nav-item" ><a class="nav-link" href="https://polygonscan.com/token/0x5a1d742fee322f8815b1616c8bb8f2de0f584106">All Region Coin</a></li>
-                            <li class="nav-item"><a class="nav-link" class="nav-link" href="signup.html">Sign-up</a></li>
+                            <li class="nav-item"><a class="nav-link" class="nav-link" href="signup.jsp">Sign-up</a></li>
                         </ul>
                     </div>
                 </div>
