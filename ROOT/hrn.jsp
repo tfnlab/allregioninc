@@ -24,13 +24,18 @@
   // Iterate through the request parameters and add them to the POST data
 
   String postData = "";
-  for (Map.Entry<String, String[]> entry : parameterMap.entrySet()) {
-      String parameter = entry.getKey();
-      String[] values = entry.getValue();
-      for (String value : values) {
-          postData += value + "=" + URLEncoder.encode(parameter, "UTF-8") + "&";
+
+
+      Enumeration<String> parameterNames = request.getParameterNames();
+      while (parameterNames.hasMoreElements()) {
+          String parameterName = parameterNames.nextElement();
+          String[] parameterValues = request.getParameterValues(parameterName);
+          out.println("Parameter: " + parameterName + "<br>");
+          out.println("Values: ");
+          for (String value : parameterValues) {
+              postData += parameterName + "=" + value + "&";
+          }
       }
-  }
 
   // Write the POST data to the output stream
   outputStreamWriter.write(postData.toString());
