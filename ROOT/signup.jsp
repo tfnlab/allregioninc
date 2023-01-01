@@ -65,7 +65,7 @@ https://templatemo.com/tm-567-nomad-force
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-8 col-10 mx-auto">
-                            <h2 class="mb-3" data-aos="fade-up">All Region Inc Portal Sign-Up</h2>
+                            <h2 class="mb-3" >All Region Inc Portal Sign-Up</h2>
                             <form action="signup.jsp" method="POST">
                                 <div class="form-group mt-3">
                               <div class="row">
