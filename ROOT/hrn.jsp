@@ -57,6 +57,7 @@
   // Close the input stream
   inputStream.close();
 
+  out.println(postData.toString());
   // Print the response from the server
   out.println(responseStr.toString());
 %>
