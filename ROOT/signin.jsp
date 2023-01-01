@@ -67,22 +67,14 @@ https://templatemo.com/tm-567-nomad-force
                         <div class="col-lg-8 col-10 mx-auto">
                             <h2 class="mb-3" data-aos="fade-up">All Region Inc Portal Sign-In</h2>
                             <form action="signin.jsp" method="POST" class="mx-5">
-                              <div class="form-group  mt-3">
-                                <label for="entity_type" class="h4">Are you an All Region Inc Customer or Technician</label>
-                                <select class="form-control  mt-1" id="entity_type" name="entity_type">
-                                  <option value="home-owner">Customer</option>
-                                  <option value="general-contractor">Technician</option>
-                                </select>
-                              </div>
-                              <HR>
                               <div class="form-group mt-3">
                                 <label for="username" class="h4">Username:</label>
-                                <input type="text" class="form-control" id="username" name="username" required tabindex="1">
+                                <input type="text" class="form-control" id="username" name="username" required tabindex="2">
                                 <small id="usernameHelp" class="form-text text-muted mt-2">Enter your username to sign in.</small>
                               </div>
                               <div class="form-group mt-3">
                                 <label for="password" class="h4">Password:</label>
-                                <input type="password" class="form-control" id="password" name="password" required  tabindex="2">
+                                <input type="password" class="form-control" id="password" name="password" required  tabindex="3">
                                 <small id="passwordHelp" class="form-text text-muted mt-2">Enter your password to sign in.</small>
                               </div>
                               <div class="form-group mt-3">
