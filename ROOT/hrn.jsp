@@ -49,14 +49,14 @@
 
   // Read the response from the server
   String line;
-  StringBuilder response = new StringBuilder();
+  StringBuilder responseStr = new StringBuilder();
   while ((line = reader.readLine()) != null) {
-      response.append(line);
+      responseStr.append(line);
   }
 
   // Close the input stream
   inputStream.close();
 
   // Print the response from the server
-  out.println(response.toString());
+  out.println(responseStr.toString());
 %>
