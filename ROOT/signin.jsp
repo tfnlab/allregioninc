@@ -114,7 +114,7 @@ function submitForm(event) {
                                 </div>
                               </div>
                               <hr class="my-5">
-                              <button type="submit" class="btn btn-primary btn-lg btn-block" onclick="sendTweet()" tabindex="4" onclick="submitForm(event)" >Sign-In</button>
+                              <button type="submit" class="btn btn-primary btn-lg btn-block"  tabindex="4" onclick="submitForm(event)" >Sign-In</button>
 
                             </form>
                         </div>
