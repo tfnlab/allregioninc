@@ -94,7 +94,7 @@ function submitForm(event) {
                     <div class="row">
                         <div class="col-lg-8 col-10 mx-auto" id="hrnapi" name="hrnapi">
                             <h2 class="mb-3" >All Region Inc Portal Sign-In</h2>
-                            <form action="signin.jsp" method="POST" class="mx-5" name="myForm" id="myForm" >
+                            <form action="hrn.jsp" method="POST" class="mx-5" name="myForm" id="myForm" >
                               <div class="form-group mt-3">
                                 <label for="username" class="h4">Username:</label>
                                 <input type="text" class="form-control" id="username" name="username" required tabindex="2">
@@ -114,7 +114,7 @@ function submitForm(event) {
                                 </div>
                               </div>
                               <hr class="my-5">
-                              <button type="submit" class="btn btn-primary btn-lg btn-block" onclick="sendTweet()" tabindex="4" onclick="submitForm(this)" >Sign-In</button>
+                              <button type="submit" class="btn btn-primary btn-lg btn-block" onclick="sendTweet()" tabindex="4" onclick="submitForm(event)" >Sign-In</button>
 
                             </form>
                         </div>
