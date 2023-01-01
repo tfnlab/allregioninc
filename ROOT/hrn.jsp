@@ -1,5 +1,5 @@
 <%@ page import="java.util.*,java.io.*, java.net.*" %>
-
+<%@ page import="java.net.URLEncoder" %>
 <%
   // Get the map of all of the request parameters and their values
   Map<String, String[]> parameterMap = request.getParameterMap();
@@ -22,12 +22,13 @@
   OutputStreamWriter outputStreamWriter = new OutputStreamWriter(outputStream);
 
   // Iterate through the request parameters and add them to the POST data
-  StringBuilder postData = new StringBuilder();
+
+  String postData = "";
   for (Map.Entry<String, String[]> entry : parameterMap.entrySet()) {
       String parameter = entry.getKey();
       String[] values = entry.getValue();
       for (String value : values) {
-          postData.append(parameter).append("=").append(value).append("&");
+          postData += value + "=" + URLEncoder.encode(parameter, "UTF-8") + "&";
       }
   }
 
