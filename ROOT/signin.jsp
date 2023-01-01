@@ -55,10 +55,11 @@ function submitForm(event) {
   };
   // Set the request method and URL
   xhr.open(form.method, form.action);
-  // Set the request headers
   xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-  // Get the form data
   var formData = new FormData(form);
+  var params = new URLSearchParams(formData);
+  xhr.send(params);
+}
   // Send the request
   xhr.send(formData);
 
