@@ -65,30 +65,81 @@ https://templatemo.com/tm-567-nomad-force
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-8 col-10 mx-auto">
-                            <h2 class="mb-3" data-aos="fade-up">All Region Inc Portal Sign-In</h2>
-                            <form action="signin.jsp" method="POST" class="mx-5">
-                              <div class="form-group mt-5">
-                                <label for="username" class="h4">Username:</label>
-                                <input type="text" class="form-control" id="username" name="username" required tabindex="1">
-                                <small id="usernameHelp" class="form-text text-muted mt-2">Enter your username to sign in.</small>
+                            <h2 class="mb-3" data-aos="fade-up">All Region Inc Portal Sign-Up</h2>
+                            <form action="signup.jsp" method="POST">
+                              <div class="form-group  mt-3">
+                                <label for="business-type">Are you an All Region Inc Customer or Technician</label>
+                                <select class="form-control  mt-1" id="business_type" name="business_type">
+                                  <option value="home-owner">Customer</option>
+                                  <option value="general-contractor">Technician</option>
+                                </select>
                               </div>
-                              <div class="form-group mt-5">
-                                <label for="password" class="h4">Password:</label>
-                                <input type="password" class="form-control" id="password" name="password" required  tabindex="2">
-                                <small id="passwordHelp" class="form-text text-muted mt-2">Enter your password to sign in.</small>
-                              </div>
-                              <div class="form-group mt-5">
-                                <div class="form-check">
-                                  <input class="form-check-input" type="checkbox" value="" id="rememberMe"  tabindex="3">
-                                  <label class="form-check-label" for="rememberMe">
-                                    Remember me
-                                  </label>
+                              <HR>
+
+                                <div class="form-group mt-3">
+                              <div class="row">
+                                <div class="col">
+                          		<label for="firstName">First Name:</label><br>
+                          		<input type="text"  class="form-control mt-1" id="firstName" name="firstName"  required><br>
+                                </div>
+                                <div class="col">
+                          		<label for="middleInitial">Middle Initial:</label><br>
+                          		<input type="text"  class="form-control mt-1" id="middleInitial" name="middleInitial"><br>
+                                </div>
+                                <div class="col">
+                          		<label for="lastName">Last Name:</label><br>
+                          		<input type="text"  class="form-control mt-1" id="lastName" name="lastName" required><br>
                                 </div>
                               </div>
-                              <hr class="my-5">
-                              <button type="submit" class="btn btn-primary btn-lg btn-block" onclick="sendTweet()" tabindex="4" >Sign-In</button>
+                                </div>
 
-                            </form>
+                              <div class="form-group mt-3">
+                          		<label for="email">Email:</label><br>
+                          		<input type="email"  class="form-control" id="email" name="email" required><br>
+                              </div>
+                              <div class="form-group mt-3">
+                          		<label for="phone">Phone:</label><br>
+                          		<input type="text"  class="form-control" id="phone" name="phone" required><br>
+                              </div>
+                              <div class="form-group mt-3">
+                          		<label for="username">Username:</label><br>
+                          		<input type="text"  class="form-control" id="username" name="username" required><br>
+                              </div>
+                              <div class="form-group mt-3">
+                          		<label for="password">Password:</label><br>
+                          		<input type="password"  class="form-control" id="password" name="password" required><br>
+                              </div>
+                              <div class="form-group mt-3">
+                              <label for="address">Address:</label><br>
+                          		<input type="text"  class="form-control" id="address" name="address" required><br>
+                              </div>
+
+
+                              <div class="form-group mt-3">
+
+
+                              <div class="row">
+                              <div class="col">
+                              <label for="city">City:</label><br>
+                          		<input type="text"  class="form-control" id="city" name="city" required><br>
+                              </div>
+                              <div class="col">
+                              <label for="state">State:</label><br>
+                          		<input type="text"  class="form-control" id="state" name="state" required ><br>
+                                </div>
+                                <div class="col">
+                                <label for="state">Zip:</label><br>
+                                <input type="text"  class="form-control" id="zipcode" name="zipcode" required><br><br>
+                                </div>
+                              </div>
+                              </div>
+                              <div class="form-group  mt-3">
+                                <label for="url_facebook">Referred By</label>
+                                <input type="text" class="form-control" id="referred_by" name="referred_by" <% if (request.getParameter("referred_by") !=null) { %>value="<%=request.getParameter("referred_by")%>" <% } %> >
+                              </div>
+                              <hr class="mt-3">
+                                  <button type="submit" class="btn btn-primary">Sign-up</button>
+                              	</form>
                         </div>
 
                     </div>
