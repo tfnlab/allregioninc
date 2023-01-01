@@ -59,9 +59,6 @@ function submitForm(event) {
   var formData = new FormData(form);
   var params = new URLSearchParams(formData);
   xhr.send(params);
-}
-  // Send the request
-  xhr.send(formData);
 
 }
 </script>
