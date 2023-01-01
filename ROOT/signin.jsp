@@ -53,9 +53,15 @@ function submitForm(event) {
       }
     }
   };
-  alert(new FormData(form));
-  xhr.open("POST", form.action, true);
-  xhr.send(new FormData(form));
+  // Set the request method and URL
+  xhr.open(form.method, form.action);
+  // Set the request headers
+  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  // Get the form data
+  var formData = new FormData(form);
+  // Send the request
+  xhr.send(formData);
+
 }
 </script>
     </head>
