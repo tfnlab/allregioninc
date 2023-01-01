@@ -32,8 +32,8 @@ https://templatemo.com/tm-567-nomad-force
 
 -->
 <script>
-function submitForm() {
-  // Get the form element
+function submitForm(event) {
+  event.preventDefault();
   var form = document.getElementById("myForm");
 
   // Create a new XMLHttpRequest object
@@ -114,7 +114,7 @@ function submitForm() {
                                 </div>
                               </div>
                               <hr class="my-5">
-                              <button type="submit" class="btn btn-primary btn-lg btn-block" onclick="sendTweet()" tabindex="4" onclick="submitForm()" >Sign-In</button>
+                              <button type="submit" class="btn btn-primary btn-lg btn-block" onclick="sendTweet()" tabindex="4" onclick="submitForm(this)" >Sign-In</button>
 
                             </form>
                         </div>
