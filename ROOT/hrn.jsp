@@ -1,4 +1,4 @@
-<%@ page import="java.io.*, java.net.*" %>
+<%@ page import="java.util.*,java.io.*, java.net.*" %>
 
 <%
   // Get the map of all of the request parameters and their values
