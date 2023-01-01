@@ -29,12 +29,8 @@
       Enumeration<String> parameterNames = request.getParameterNames();
       while (parameterNames.hasMoreElements()) {
           String parameterName = parameterNames.nextElement();
-          String[] parameterValues = request.getParameterValues(parameterName);
-//          out.println("Parameter: " + parameterName + "<br>");
-//          out.println("Values: ");
-          for (String value : parameterValues) {
-              postData += parameterName + "=" + value + "&";
-          }
+          String parameterValue = request.getParameter(parameterName);
+          postData += parameterName + "=" + parameterValue + "&";
       }
 
   // Write the POST data to the output stream
