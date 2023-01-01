@@ -40,7 +40,7 @@ https://templatemo.com/tm-567-nomad-force
             <nav class="navbar navbar-expand-lg bg-light shadow-lg">
                 <div class="container">
                     <a class="navbar-brand" href="index.html">
-                        <strong>Nomad Force</strong>
+                        <strong>All Region Inc</strong>
                     </a>
 
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -95,21 +95,6 @@ https://templatemo.com/tm-567-nomad-force
                 </div>
             </section>
 
-            <section class="related-news section-padding">
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-8 col-10 mx-auto text-center">
-                            <span class="d-block" data-aos="zoom-in">Next article</span>
-
-                            <h3 class="news-title" data-aos="fade-up">
-                                <a href="news-detail.html" class="news-title-link">Job Opportunities - Digital Marketing</a>
-                            </h3>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
 
         </main>
 
@@ -120,18 +105,18 @@ https://templatemo.com/tm-567-nomad-force
                     <div class="col-12">
                         <h5 class="text-white">
                             <i class="bi-geo-alt-fill me-2"></i>
-                            State of Rio de Janeiro, Brazil
+                            All Region Inc
                         </h5>
-
-                        <a href="mailto:info@company.com" class="custom-link mt-3 mb-5">
-                            info@company.com
+                        <a href="mailto:info@allregioninc.com" class="custom-link mt-3 mb-5">
+                            info@allregioninc.com
                         </a>
                     </div>
 
                     <div class="col-6">
-                        <p class="copyright-text mb-0">Copyright © Nomad Force 2021
-
-                        <br><br>Design: <a href="https://templatemo.com/page/1" target="_parent">TemplateMo</a></p>
+                      <p>
+                         Copyright © TFNLab 2023
+                        <br><br>Design: <a href="https://tfnlab.com" target="_parent">TFNLab</a>
+                    </p>
 
                     </div>
 
