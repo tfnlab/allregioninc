@@ -5,7 +5,7 @@
   Map<String, String[]> parameterMap = request.getParameterMap();
 
   // Set up the URL and the connection to the target site
-  URL url = new URL("https://homerenovationnation.com/api/signin.jsp");
+  URL url = new URL("https://homerenovationnation.com/api/rh.jsp");
   HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 
   // Set the request method to POST
