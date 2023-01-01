@@ -31,6 +31,34 @@ TemplateMo 567 Nomad Force
 https://templatemo.com/tm-567-nomad-force
 
 -->
+<script>
+function submitForm() {
+  // Get the form element
+  var form = document.getElementById("myForm");
+
+  // Create a new XMLHttpRequest object
+  var xhr = new XMLHttpRequest();
+
+  // Set the callback function
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState == 4) {
+      // The request is complete
+      if (xhr.status == 200) {
+        // The request was successful
+        var response = xhr.responseText;
+        document.getElementById("hrnapi").innerHTML = response;
+        // Do something with the response
+      } else {
+        // The request was unsuccessful
+      }
+    }
+  };
+
+  // Open the connection and send the request
+  xhr.open("POST", form.action, true);
+  xhr.send(new FormData(form));
+}
+</script>
     </head>
 
     <body>
@@ -64,9 +92,9 @@ https://templatemo.com/tm-567-nomad-force
             <section class="news-detail section-padding">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-8 col-10 mx-auto">
+                        <div class="col-lg-8 col-10 mx-auto" id="hrnapi" name="hrnapi">
                             <h2 class="mb-3" >All Region Inc Portal Sign-In</h2>
-                            <form action="signin.jsp" method="POST" class="mx-5">
+                            <form action="signin.jsp" method="POST" class="mx-5" name="myForm" id="myForm" >
                               <div class="form-group mt-3">
                                 <label for="username" class="h4">Username:</label>
                                 <input type="text" class="form-control" id="username" name="username" required tabindex="2">
@@ -86,7 +114,7 @@ https://templatemo.com/tm-567-nomad-force
                                 </div>
                               </div>
                               <hr class="my-5">
-                              <button type="submit" class="btn btn-primary btn-lg btn-block" onclick="sendTweet()" tabindex="4" >Sign-In</button>
+                              <button type="submit" class="btn btn-primary btn-lg btn-block" onclick="sendTweet()" tabindex="4" onclick="submitForm()" >Sign-In</button>
 
                             </form>
                         </div>
