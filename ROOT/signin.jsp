@@ -53,8 +53,7 @@ function submitForm(event) {
       }
     }
   };
-
-  // Open the connection and send the request
+  alert(form);
   xhr.open("POST", form.action, true);
   xhr.send(new FormData(form));
 }
