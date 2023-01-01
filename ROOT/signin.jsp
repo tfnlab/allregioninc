@@ -52,22 +52,10 @@ https://templatemo.com/tm-567-nomad-force
                             <li class="nav-item active">
                                 <a class="nav-link" href="index.html#hero">Home</a>
                             </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="index.html#about">Our Studio</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="index.html#portfolio">Portfolio</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="index.html#news">News & Events</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="index.html#contact">Contact Us</a>
-                            </li>
+                            <li class="nav-item" ><a class="nav-link" href="https://opensea.io/collection/all-region">Ethereum</a></li>
+                            <li class="nav-item" ><a class="nav-link" href="https://opensea.io/collection/all-region-v2">Matic</a></li>
+                            <li class="nav-item" ><a class="nav-link" href="https://polygonscan.com/token/0x5a1d742fee322f8815b1616c8bb8f2de0f584106">All Region Coin</a></li>
+                            <li class="nav-item"><a class="nav-link" class="nav-link" href="signup.html">Sign-up</a></li>
                         </ul>
                     </div>
                 </div>
@@ -77,43 +65,30 @@ https://templatemo.com/tm-567-nomad-force
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-8 col-10 mx-auto">
-                            <h2 class="mb-3" data-aos="fade-up">What happened to new viral video?</h2>
-
-                            <p class="me-4" data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan.</p>
-
-                            <p data-aos="fade-up">Nullam id lorem commodo, pharetra sapien ut, accumsan ligula. Sed sit amet sem pulvinar, imperdiet eros quis, vestibulum felis. Pellentesque posuere scelerisque sodales.</p>
-
-                            <div class="clearfix my-4 mt-lg-0 mt-5">
-                                <div class="col-md-6 float-md-end mb-3 ms-md-3" data-aos="fade-up">
-                                    <figure class="figure">
-                                        <img src="images/news/jean-philippe-delberghe-MmanXAs1sKw-unsplash.jpeg" class="img-fluid news-image" alt="">
-
-                                        <figcaption class="figure-caption text-end">A caption for the above image.</figcaption>
-                                    </figure>
+                            <h2 class="mb-3" data-aos="fade-up">All Region Inc Portal Sign-In</h2>
+                            <form action="signin.jsp" method="POST" class="mx-5">
+                              <div class="form-group mt-5">
+                                <label for="username" class="h4">Username:</label>
+                                <input type="text" class="form-control" id="username" name="username" required tabindex="1">
+                                <small id="usernameHelp" class="form-text text-muted mt-2">Enter your username to sign in.</small>
+                              </div>
+                              <div class="form-group mt-5">
+                                <label for="password" class="h4">Password:</label>
+                                <input type="password" class="form-control" id="password" name="password" required  tabindex="2">
+                                <small id="passwordHelp" class="form-text text-muted mt-2">Enter your password to sign in.</small>
+                              </div>
+                              <div class="form-group mt-5">
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="rememberMe"  tabindex="3">
+                                  <label class="form-check-label" for="rememberMe">
+                                    Remember me
+                                  </label>
                                 </div>
+                              </div>
+                              <hr class="my-5">
+                              <button type="submit" class="btn btn-primary btn-lg btn-block" onclick="sendTweet()" tabindex="4" >Sign-In</button>
 
-                                  <p data-aos="fade-up">
-                                    Morbi scelerisque urna in orci elementum, nec mollis ligula luctus. Proin ullamcorper pulvinar commodo. Quisque tortor nunc, ultricies efficitur ex sit amet, tempus rutrum libero. In nec faucibus tellus.
-                                  </p>
-
-                                  <p data-aos="fade-up">
-                                    Donec justo orci, pretium ultricies ante eget, bibendum semper enim. Nunc efficitur purus suscipit leo placerat, a ultricies purus gravida. Sed sollicitudin ornare porta. Mauris convallis sit amet purus sed rutrum.
-                                  </p>
-
-                                  <p data-aos="fade-up">
-                                    This Bootstrap 5 layout is provided by TemplateMo website and it is free to use for any of your website. You are allowed to edit it in any way you like. However, please do not redistribute this template ZIP file for a template download purpose on any other website such as Free CSS collection websites.
-                                  </p>
-                            </div>
-
-                            <div class="social-share d-flex mt-5">
-                                <span class="me-4" data-aos="zoom-in">Share this article:</span>
-
-                                <a href="#" class="social-share-icon bi-facebook" data-aos="zoom-in"></a>
-
-                                <a href="#" class="social-share-icon bi-twitter mx-3" data-aos="zoom-in"></a>
-
-                                <a href="#" class="social-share-icon bi-envelope" data-aos="zoom-in"></a>
-                            </div>
+                            </form>
                         </div>
 
                     </div>
