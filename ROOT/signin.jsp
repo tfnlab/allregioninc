@@ -53,7 +53,7 @@ function submitForm(event) {
       }
     }
   };
-  alert(form);
+  alert(new FormData(form));
   xhr.open("POST", form.action, true);
   xhr.send(new FormData(form));
 }
