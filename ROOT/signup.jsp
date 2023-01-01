@@ -68,8 +68,8 @@ https://templatemo.com/tm-567-nomad-force
                             <h2 class="mb-3" data-aos="fade-up">All Region Inc Portal Sign-Up</h2>
                             <form action="signup.jsp" method="POST">
                               <div class="form-group  mt-3">
-                                <label for="business-type">Are you an All Region Inc Customer or Technician</label>
-                                <select class="form-control  mt-1" id="business_type" name="business_type">
+                                <label for="entity_type">Are you an All Region Inc Customer or Technician</label>
+                                <select class="form-control  mt-1" id="entity_type" name="entity_type">
                                   <option value="home-owner">Customer</option>
                                   <option value="general-contractor">Technician</option>
                                 </select>
