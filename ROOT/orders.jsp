@@ -33,7 +33,7 @@ https://templatemo.com/tm-567-nomad-force
 -->
 <script>
 function getRequest() {
-
+  alert("test");
   // Create a new XMLHttpRequest object
   var xhr = new XMLHttpRequest();
 
