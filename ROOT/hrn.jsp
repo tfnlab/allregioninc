@@ -24,7 +24,7 @@
 
   // Iterate through the request parameters and add them to the POST data
 
-  String postData = "customerid=allregioninc&api_key=bigboy&";
+  String postData = "customerId=allregioninc&api_key=bigboy&";
 
 
       Enumeration<String> parameterNames = request.getParameterNames();
