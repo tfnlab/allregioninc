@@ -26,7 +26,14 @@
 
   String postData = "customerId=allregioninc&api_key=bigboy&";
 
-
+      if(request.getParameter("username")!=null && request.getParameter("password")!=null){
+        session.setAttribute("username", request.getParameter("username"));
+        session.setAttribute("password", request.getParameter("password"));
+      }else{
+        String un = (String)session.setAttribute("username");
+        String up = (String)session.setAttribute("password");
+        postData += "username=" + un + "&password=" + up;
+      }
       Enumeration<String> parameterNames = request.getParameterNames();
       while (parameterNames.hasMoreElements()) {
           String parameterName = parameterNames.nextElement();
