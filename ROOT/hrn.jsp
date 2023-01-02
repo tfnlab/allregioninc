@@ -1,6 +1,5 @@
 <%@ page import="java.util.*,java.io.*, java.net.*" %>
 <%@ page import="java.net.URLEncoder" %>
-<%=request.getParameter("username") + " USERNAME OURPUT" %>
 <%
   // Get the map of all of the request parameters and their values
   Map<String, String[]> parameterMap = request.getParameterMap();
