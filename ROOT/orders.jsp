@@ -33,20 +33,13 @@ https://templatemo.com/tm-567-nomad-force
 -->
 <script>
 function getRequest() {
-  alert("test");
-  // Create a new XMLHttpRequest object
   var xhr = new XMLHttpRequest();
-
-  // Set the callback function
   xhr.onreadystatechange = function() {
     if (xhr.readyState == 4) {
       // The request is complete
       if (xhr.status == 200) {
-        // The request was successful
-        alert(response);
         var response = xhr.responseText;
         document.getElementById("hrnapi").innerHTML = response;
-        // Do something with the response
       } else {
         // The request was unsuccessful
       }
@@ -54,9 +47,8 @@ function getRequest() {
   };
   // Set the request method and URL
   var urlString = "hrn.jsp?apiAction=getOrders&";
-  alert(urlString);
-  xhttp.open("GET", urlString, true);
-  xhttp.send();
+  xhr.open("GET", urlString, true);
+  xhr.send();
 
 }
 </script>
