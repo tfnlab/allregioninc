@@ -53,6 +53,7 @@ function getRequest() {
   };
   // Set the request method and URL
   var urlString = "hrn.jsp?apiAction=getOrders";
+  alert(urlString);
   xhttp.open("GET", urlString, true);
   xhttp.send();
 
