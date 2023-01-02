@@ -97,7 +97,7 @@ function submitForm(event) {
                     <div class="row">
                         <div class="col-lg-8 col-10 mx-auto" id="hrnapi" name="hrnapi">
                             <h2 class="mb-3" >All Region Inc Portal Sign-Up</h2>
-                            <form action="hrn.jsp" method="POST">
+                            <form action="hrn.jsp" method="POST" name="myForm" id="myForm" >
                               <input type="hidden" id="apiAction" name="apiAction" value="signup" />
                                 <div class="form-group mt-3">
                               <div class="row">
