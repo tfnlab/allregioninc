@@ -43,6 +43,7 @@ function getRequest() {
       // The request is complete
       if (xhr.status == 200) {
         // The request was successful
+        alert(response);
         var response = xhr.responseText;
         document.getElementById("hrnapi").innerHTML = response;
         // Do something with the response
