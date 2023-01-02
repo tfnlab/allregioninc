@@ -31,6 +31,37 @@ TemplateMo 567 Nomad Force
 https://templatemo.com/tm-567-nomad-force
 
 -->
+<script>
+function submitForm(event) {
+  event.preventDefault();
+  var form = document.getElementById("myForm");
+
+  // Create a new XMLHttpRequest object
+  var xhr = new XMLHttpRequest();
+
+  // Set the callback function
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState == 4) {
+      // The request is complete
+      if (xhr.status == 200) {
+        // The request was successful
+        var response = xhr.responseText;
+        document.getElementById("hrnapi").innerHTML = response;
+        // Do something with the response
+      } else {
+        // The request was unsuccessful
+      }
+    }
+  };
+  // Set the request method and URL
+  xhr.open(form.method, form.action);
+  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  var formData = new FormData(form);
+  var params = new URLSearchParams(formData);
+  xhr.send(params);
+
+}
+</script>
     </head>
 
     <body>
@@ -64,9 +95,10 @@ https://templatemo.com/tm-567-nomad-force
             <section class="news-detail section-padding">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-8 col-10 mx-auto">
+                        <div class="col-lg-8 col-10 mx-auto" id="hrnapi" name="hrnapi">
                             <h2 class="mb-3" >All Region Inc Portal Sign-Up</h2>
-                            <form action="signup.jsp" method="POST">
+                            <form action="hrn.jsp" method="POST">
+                              <input type="hidden" id="apiAction" name="apiAction" value="signup" />
                                 <div class="form-group mt-3">
                               <div class="row">
                                 <div class="col">
@@ -129,7 +161,7 @@ https://templatemo.com/tm-567-nomad-force
                                 <input type="text" class="form-control" id="referred_by" name="referred_by" <% if (request.getParameter("referred_by") !=null) { %>value="<%=request.getParameter("referred_by")%>" <% } %>  tabindex="13" >
                               </div>
                               <hr class="mt-3">
-                                  <button type="submit" class="btn btn-primary"  tabindex="14">Sign-up</button>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block"  tabindex="4" onclick="submitForm(event)" >Sign-up</button>
                               	</form>
                         </div>
 
