@@ -30,8 +30,8 @@
         session.setAttribute("username", request.getParameter("username"));
         session.setAttribute("password", request.getParameter("password"));
       }else{
-        String un = (String)session.setAttribute("username");
-        String up = (String)session.setAttribute("password");
+        String un = (String)session.getAttribute("username");
+        String up = (String)session.getAttribute("password");
         postData += "username=" + un + "&password=" + up;
       }
       Enumeration<String> parameterNames = request.getParameterNames();
