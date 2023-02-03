@@ -99,7 +99,7 @@ function submitForm(event) {
                         <div class="col-lg-8 col-10 mx-auto" id="hrnapi" name="hrnapi">
                             <h2 class="mb-3" >All Region Inc Employee Portal Sign-In</h2>
                             <form action="hrn.jsp" method="POST" class="mx-5" name="myForm" id="myForm" >
-                              <input type="hidden" id="apiAction" name="apiAction" value="signin"/>
+                              <input type="hidden" id="apiAction" name="apiAction" value="signinemployee"/>
                               <div class="form-group mt-3">
                                 <label for="username" class="h4">Username:</label>
                                 <input type="text" class="form-control" id="username" name="username" required tabindex="2">
