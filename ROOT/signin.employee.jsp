@@ -7,17 +7,14 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Nomad Force HTML Bootstrap 5 Template</title>
+        <title>Nomad Force HTML Template - News Page</title>
 
         <!-- CSS FILES -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&display=swap" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700;900&display=swap" rel="stylesheet">
 
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/bootstrap-icons.css" rel="stylesheet">
@@ -34,33 +31,42 @@ TemplateMo 567 Nomad Force
 https://templatemo.com/tm-567-nomad-force
 
 -->
+<script>
+function submitForm(event) {
+  event.preventDefault();
+  var form = document.getElementById("myForm");
+
+  // Create a new XMLHttpRequest object
+  var xhr = new XMLHttpRequest();
+
+  // Set the callback function
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState == 4) {
+      // The request is complete
+      if (xhr.status == 200) {
+        // The request was successful
+        var response = xhr.responseText;
+        document.getElementById("hrnapi").innerHTML = response;
+        // Do something with the response
+      } else {
+        // The request was unsuccessful
+      }
+    }
+  };
+  // Set the request method and URL
+  xhr.open(form.method, form.action);
+  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  var formData = new FormData(form);
+  var params = new URLSearchParams(formData);
+  xhr.send(params);
+
+}
+</script>
     </head>
 
     <body>
 
         <main>
-
-            <section class="hero" id="hero">
-                <div class="heroText">
-                    <h1 class="text-white" >
-                        Business Portal
-                    </h1>
-                    <p  class="text-white" >
-                        Secure, centralized access for customers, employees, and vendors
-                        <HR>
-                        <a href="signup.jsp" class="btn btn-primary btn-lg">Sign-Up</a>
-                    </p>
-                </div>
-
-                <div class="videoWrapper">
-                    <video autoplay="" loop="" muted="" class="custom-video" poster="videos/792bd98f3e617786c850493560e11c45.jpg">
-                        <source src="videos/814dc43e870597176cad645798825c03.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-
-                <div class="overlay"></div>
-            </section>
 
             <nav class="navbar navbar-expand-lg bg-light shadow-lg">
                 <div class="container">
@@ -75,42 +81,52 @@ https://templatemo.com/tm-567-nomad-force
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav mx-auto">
                             <li class="nav-item active">
-                                <a class="nav-link" href="#hero">Home</a>
+                                <a class="nav-link" href="index.html#hero">Home</a>
                             </li>
-                            <li class="nav-item" ><a class="nav-link" href="signup.employee.jsp">Employees</a></li>
                             <li class="nav-item" ><a class="nav-link" href="https://opensea.io/collection/all-region">Ethereum</a></li>
                             <li class="nav-item" ><a class="nav-link" href="https://opensea.io/collection/all-region-v2">Matic</a></li>
                             <li class="nav-item" ><a class="nav-link" href="https://polygonscan.com/token/0x5a1d742fee322f8815b1616c8bb8f2de0f584106">All Region Coin</a></li>
-                            <li class="nav-item"><a class="nav-link" class="nav-link" href="signin.jsp">Sign-In</a></li>
+                            <li class="nav-item"><a class="nav-link" class="nav-link" href="signup.jsp">Sign-up</a></li>
                         </ul>
                     </div>
                 </div>
             </nav>
 
-            <section class="section-padding pb-0" id="about">
-                <div class="container mb-5 pb-lg-5">
+            <section class="news-detail section-padding">
+                <div class="container">
                     <div class="row">
-                        <div class="col-12">
-                            <h2 class="mb-3" >
-                              Experience the power of AI and the security of the blockchain while meeting your HVAC needs with All Region Inc's customer portal
-                            </h2>
-                        </div>
+                        <div class="col-lg-8 col-10 mx-auto" id="hrnapi" name="hrnapi">
+                            <h2 class="mb-3" >All Region Inc Portal Sign-In</h2>
+                            <form action="hrn.jsp" method="POST" class="mx-5" name="myForm" id="myForm" >
+                              <input type="hidden" id="apiAction" name="apiAction" value="signin"/>
+                              <div class="form-group mt-3">
+                                <label for="username" class="h4">Username:</label>
+                                <input type="text" class="form-control" id="username" name="username" required tabindex="2">
+                                <small id="usernameHelp" class="form-text text-muted mt-2">Enter your username to sign in.</small>
+                              </div>
+                              <div class="form-group mt-3">
+                                <label for="password" class="h4">Password:</label>
+                                <input type="password" class="form-control" id="password" name="password" required  tabindex="3">
+                                <small id="passwordHelp" class="form-text text-muted mt-2">Enter your password to sign in.</small>
+                              </div>
+                              <div class="form-group mt-3">
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="rememberMe"  tabindex="3">
+                                  <label class="form-check-label" for="rememberMe">
+                                    Remember me
+                                  </label>
+                                </div>
+                              </div>
+                              <hr class="my-5">
+                              <button type="submit" class="btn btn-primary btn-lg btn-block"  tabindex="4" onclick="submitForm(event)" >Sign-In</button>
 
-                        <div class="col-lg-6 col-12 mt-3 mb-lg-5">
-                            <p class="me-2"  >
-                              All Region Inc's business portal is a secure, online platform that allows customers, employees, and vendors to access and manage important business tasks and information. With just one login, users can view and update account details, place orders, submit and track service requests, and collaborate with others. The portal is designed to streamline business processes and improve efficiency, making it easier for users to stay connected and up-to-date on all aspects of their business. Whether you're a customer looking to place an order or an employee needing to access important documents, the All Region Inc business portal has everything you need in one convenient location.
-                            </p>
-                        </div>
-
-                        <div class="col-lg-6 col-12 mt-lg-3 mb-lg-5">
-                            <p  >
-                              All Region Inc's business portal is not just another online platform – it's powered by artificial intelligence and connected to the blockchain. This means that it's not only able to streamline business processes and improve efficiency, but it also has the ability to learn and adapt to users' needs over time. By leveraging the power of AI and the security of the blockchain, the All Region Inc business portal offers users a truly innovative and transformative experience. Whether you're a customer, employee, or vendor, you can trust that the All Region Inc business portal will provide you with the tools and information you need to succeed, all while keeping your data safe and secure.
-                            </p>
+                            </form>
                         </div>
 
                     </div>
                 </div>
             </section>
+
 
         </main>
 
