@@ -83,6 +83,7 @@ function submitForm(event) {
                             <li class="nav-item active">
                                 <a class="nav-link" href="index.html#hero">Home</a>
                             </li>
+                            <li class="nav-item" ><a class="nav-link" href="signup.employee.jsp">Careers</a></li>
                             <li class="nav-item" ><a class="nav-link" href="https://opensea.io/collection/all-region">Ethereum</a></li>
                             <li class="nav-item" ><a class="nav-link" href="https://opensea.io/collection/all-region-v2">Matic</a></li>
                             <li class="nav-item" ><a class="nav-link" href="https://polygonscan.com/token/0x5a1d742fee322f8815b1616c8bb8f2de0f584106">All Region Coin</a></li>
@@ -96,7 +97,7 @@ function submitForm(event) {
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-8 col-10 mx-auto" id="hrnapi" name="hrnapi">
-                            <h2 class="mb-3" >All Region Inc Portal Sign-In</h2>
+                            <h2 class="mb-3" >All Region Inc Employee Portal Sign-In</h2>
                             <form action="hrn.jsp" method="POST" class="mx-5" name="myForm" id="myForm" >
                               <input type="hidden" id="apiAction" name="apiAction" value="signin"/>
                               <div class="form-group mt-3">
